@@ -11,8 +11,6 @@ const campsiteRouter = require("./routes/campsiteRouter");
 const promotionRouter = require("./routes/promotionRouter");
 const partnerRouter = require("./routes/partnerRouter");
 
-var app = express();
-
 // database connection
 const mongoose = require("mongoose");
 
@@ -28,6 +26,8 @@ connect.then(
   () => console.log("Connected correctly to server"),
   (err) => console.log(err)
 );
+
+var app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
